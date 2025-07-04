@@ -1,35 +1,84 @@
 .products-section {
-  padding: 60px 20px;
+  padding: 60px 20px 80px;
   text-align: center;
   background: #f4f4f4;
+  max-width: 1300px;
+  margin: auto;
 }
 
 .products-section h2 {
   font-size: 36px;
   color: #0b7c7c;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-weight: bold;
+}
+
+.product-intro {
+  max-width: 900px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.product-intro .intro-image {
+  max-width: 180px;
+  margin-bottom: 20px;
+}
+
+.product-intro h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.product-intro p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.product-intro h4 {
+  margin: 20px 0 10px;
+  color: #0b7c7c;
+  font-size: 20px;
+}
+
+/* Updated Bullet List Styling */
+.bullet-list {
+  list-style-type: disc;    /* Solid round bullets */
+  padding-left: 25px;       /* Spacing for bullets */
+  margin: 0 auto 20px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.bullet-list li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
 }
 
 .products-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
   perspective: 1500px;
 }
 
 .flip-card {
   background-color: transparent;
-  width: 300px;
+  width: 280px;
   height: 380px;
   perspective: 1000px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  margin: 15px;
 }
 
 .flip-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 }
 
 .flip-card-inner {
@@ -38,8 +87,8 @@
   height: 100%;
   transition: transform 0.8s ease;
   transform-style: preserve-3d;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .flip-card:hover .flip-card-inner {
@@ -57,15 +106,14 @@
   height: 100%;
   backface-visibility: hidden;
   background: #fff;
-  border-radius: 12px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
   box-sizing: border-box;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .flip-card-front img {
@@ -75,30 +123,50 @@
   margin-bottom: 15px;
 }
 
-.flip-card-front h3, .flip-card-back h3 {
+.flip-card-front h3,
+.flip-card-back h3 {
   margin: 10px 0;
   color: #0b7c7c;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: bold;
 }
 
-.flip-card-front p, .flip-card-back p {
+.flip-card-front p,
+.flip-card-back p {
   font-size: 14px;
   color: #555;
   text-align: center;
   line-height: 1.5;
+  padding: 0 10px;
 }
 
 .flip-card-back {
   transform: rotateY(180deg);
   background: linear-gradient(135deg, #e0f7f7, #f7fcfc);
+  overflow-y: auto;
 }
 
+/* Responsive Enhancements */
 @media (max-width: 768px) {
-  .flip-card {
-    height: 360px;
+  .products-container {
+    gap: 25px;
   }
+
+  .flip-card {
+    width: 90%;
+    max-width: 320px;
+    height: 370px;
+  }
+
   .flip-card:hover {
     transform: none;
+  }
+
+  .product-intro h3 {
+    font-size: 20px;
+  }
+
+  .product-intro p {
+    font-size: 14px;
   }
 }

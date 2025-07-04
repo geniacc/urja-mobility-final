@@ -1,80 +1,94 @@
 import React, { useState } from "react";
 import "./Products.css";
-import product1 from "../assets/product1.jpg";
-import product2 from "../assets/product2.jpg";
-import product3 from "../assets/product3.jpg";
+import batteryImg from "../assets/battery-product.jpg";
+import l2Img from "../assets/l2.jpg";
+import l3Img from "../assets/l3.jpg";
+import l5Img from "../assets/l5.jpg";
 
 export default function Products() {
   const [flippedCard, setFlippedCard] = useState(null);
 
   const handleFlip = (index) => {
-    if (window.innerWidth <= 768) {
-      setFlippedCard(flippedCard === index ? null : index);
-    }
+    setFlippedCard(flippedCard === index ? null : index);
   };
 
   return (
     <section className="products-section" id="products">
-      <h2>Our Products</h2>
+      
+      <h2>Our Product</h2>
+      
+      <div className="product-intro">
+        <img src={batteryImg} alt="Battery Icon" className="intro-image" />
+        <h3>Advanced Battery Solutions for Electric Vehicles</h3>
+        <p>
+          Experience the next generation of energy storage with our state-of-the-art batteries, engineered for performance, reliability, and smart connectivity. Designed to power a range of electric vehicles, our batteries deliver exceptional value and peace of mind.
+        </p>
+
+       <h4>Key Features</h4>
+<ul className="bullet-list">
+  <li><strong>Long Life Cycle:</strong> Up to 2000 charge cycles for extended usage and reliability.</li>
+  <li><strong>Comprehensive Warranty:</strong> Enjoy a 3-year warranty for worry-free usage.</li>
+  <li><strong>Certified Quality:</strong> AIS 156 quality standard certified and verified for maximum safety and compliance.</li>
+  <li><strong>Low Service Cost:</strong> Designed for minimal maintenance and reduced total cost of usage.</li>
+  <li><strong>Smart IoT Enabled:</strong> All batteries come with integrated IoT features for real-time monitoring, diagnostics, and enhanced user experience.</li>
+</ul>
+
+      </div>
+
+      <h2>Battery Options for Every Need</h2>
 
       <div className="products-container">
-
-        {/* Product 1 */}
+        
+        {/* L2 Card */}
         <div
           className={`flip-card ${flippedCard === 1 ? "flip-mobile" : ""}`}
           onClick={() => handleFlip(1)}
         >
           <div className="flip-card-inner">
             <div className="flip-card-front">
-              <img src={product1} alt="Electric Scooter" className="product-image" />
-              <h3>Electric Scooters</h3>
-              <p>Efficient, reliable, and eco-friendly mobility solutions.</p>
+              <img src={l2Img} alt="L2 Battery" />
+              <h3>L2 Battery</h3>
+              <p>45–50 Ah | Lightweight, compact design</p>
             </div>
             <div className="flip-card-back">
-              <h3>Electric Scooters</h3>
-              <p>
-                Our electric scooters offer high performance, zero emissions, and minimal running costs. Ideal for urban commutes with advanced safety features and smart battery monitoring.
-              </p>
+              <h3>L2 Battery</h3>
+              <p>Ideal for lightweight two-wheelers, offering a balance of capacity and portability.</p>
             </div>
           </div>
         </div>
 
-        {/* Product 2 */}
+        {/* L3 Card */}
         <div
           className={`flip-card ${flippedCard === 2 ? "flip-mobile" : ""}`}
           onClick={() => handleFlip(2)}
         >
           <div className="flip-card-inner">
             <div className="flip-card-front">
-              <img src={product2} alt="Charging Solutions" className="product-image" />
-              <h3>Charging Solutions</h3>
-              <p>Smart charging stations for convenient and rapid energy access.</p>
+              <img src={l3Img} alt="L3 Battery" />
+              <h3>L3 Battery</h3>
+              <p>100 Ah | High power, robust build</p>
             </div>
             <div className="flip-card-back">
-              <h3>Charging Solutions</h3>
-              <p>
-                Our charging infrastructure ensures fast, reliable, and widespread charging options, supporting both battery swaps and conventional charging for maximum convenience.
-              </p>
+              <h3>L3 Battery</h3>
+              <p>Suited for mid-range vehicles requiring higher power output.</p>
             </div>
           </div>
         </div>
 
-        {/* Product 3 */}
+        {/* L5 Card */}
         <div
           className={`flip-card ${flippedCard === 3 ? "flip-mobile" : ""}`}
           onClick={() => handleFlip(3)}
         >
           <div className="flip-card-inner">
             <div className="flip-card-front">
-              <img src={product3} alt="Battery Technology" className="product-image" />
-              <h3>Battery Technology</h3>
-              <p>Advanced battery systems designed for performance and sustainability.</p>
+              <img src={l5Img} alt="L5 Battery" />
+              <h3>L5 Battery</h3>
+              <p>200 Ah | Maximum performance</p>
             </div>
             <div className="flip-card-back">
-              <h3>Battery Technology</h3>
-              <p>
-                We offer cutting-edge battery technology with long life, enhanced safety, superior energy density, and real-time IoT monitoring to maximize reliability and efficiency.
-              </p>
+              <h3>L5 Battery</h3>
+              <p>Built for heavy-duty applications, delivering top-tier performance.</p>
             </div>
           </div>
         </div>
