@@ -67,3 +67,6 @@ body {
   color: white;
   padding: 1rem;
 }
+html {
+  scroll-behavior: smooth;
+}

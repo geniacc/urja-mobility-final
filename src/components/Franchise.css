@@ -1,0 +1,115 @@
+.franchise-section {
+  padding: 60px 20px;
+  background: #f4f4f4;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.franchise-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  align-items: center;
+  gap: 40px;
+}
+
+.franchise-text h2 {
+  font-size: 36px;
+  color: #0b7c7c;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.franchise-text p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.franchise-btn {
+  background: #0b7c7c;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.franchise-btn:hover {
+  background: #095f5f;
+  transform: scale(1.05);
+}
+
+.franchise-media img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.franchise-accordion {
+  max-width: 900px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.accordion-item h3 {
+  cursor: pointer;
+  color: #0b7c7c;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin: 0;
+}
+
+.accordion-content {
+  margin-top: 15px;
+  color: #555;
+  line-height: 1.7;
+  padding-left: 10px;
+}
+
+.franchise-cta {
+  text-align: center;
+  margin-top: 40px;
+  background: #f0f9f9;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.franchise-cta h3 {
+  color: #0b7c7c;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.franchise-cta p {
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  background: #f9f9f9;
+  padding: 0 15px;
+  border-radius: 6px;
+  margin-top: 5px;
+}
+
+.accordion-content.open {
+  max-height: 500px; /* Adjust height if needed */
+  padding: 15px;
+}
