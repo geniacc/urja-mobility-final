@@ -12,6 +12,7 @@ import RiskManagement from "./components/RiskManagement";
 import SocialMedia from "./components/SocialMedia";
 import StaffLoan from "./components/StaffLoan";
 import TermsConditions from "./components/TermsConditions";
+import FranchiseForm from "./components/FranchiseForm"; // Import FranchiseForm
 
 function ScrollToHash() {
   const location = useLocation();
@@ -48,6 +49,9 @@ export default function App() {
         <Route path="/policies/social-media" element={<SocialMedia />} />
         <Route path="/policies/staff-loan" element={<StaffLoan />} />
         <Route path="/policies/terms-conditions" element={<TermsConditions />} />
+        
+        {/* Franchise Inquiry Route */}
+        <Route path="/franchise-inquiry" element={<FranchiseForm />} />
       </Routes>
 
       <Footer />

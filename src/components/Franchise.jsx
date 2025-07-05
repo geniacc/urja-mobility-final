@@ -1,16 +1,22 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Franchise.css";
 import franchiseImage from "../assets/franchise.jpg";
 
 export default function Franchise() {
   const [openSection, setOpenSection] = useState(null);
+  const navigate = useNavigate();
 
   const toggleSection = (index) => {
     setOpenSection(openSection === index ? null : index);
   };
 
+  const handlePhoneCall = () => {
+    window.location.href = "tel:+919999999999"; // Replace with your actual phone number
+  };
+
   const handleInquiry = () => {
-    window.open("mailto:info@urjamobility.in?subject=Franchise%20Inquiry", "_blank");
+    navigate("/franchise-inquiry");
   };
 
   return (
@@ -21,7 +27,7 @@ export default function Franchise() {
           <p>
             Join a thriving brand and unlock your entrepreneurial potential. By franchising with us, you gain access to a proven business model, comprehensive support, and a recognized name in the industry. We are committed to your success and provide the tools and resources you need to grow.
           </p>
-          <button className="franchise-btn" onClick={handleInquiry}>
+          <button className="franchise-btn" onClick={handlePhoneCall}>
             Contact Franchise Team
           </button>
         </div>
