@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
@@ -12,7 +12,7 @@ import RiskManagement from "./components/RiskManagement";
 import SocialMedia from "./components/SocialMedia";
 import StaffLoan from "./components/StaffLoan";
 import TermsConditions from "./components/TermsConditions";
-import FranchiseForm from "./components/FranchiseForm"; // Import FranchiseForm
+import FranchiseForm from "./components/FranchiseForm";
 
 function ScrollToHash() {
   const location = useLocation();
@@ -34,7 +34,7 @@ function ScrollToHash() {
 
 export default function App() {
   return (
-    <Router basename="/urja-mobility-clone">
+    <Router>
       <Navbar />
       <ScrollToHash />
 
@@ -49,8 +49,6 @@ export default function App() {
         <Route path="/policies/social-media" element={<SocialMedia />} />
         <Route path="/policies/staff-loan" element={<StaffLoan />} />
         <Route path="/policies/terms-conditions" element={<TermsConditions />} />
-        
-        {/* Franchise Inquiry Route */}
         <Route path="/franchise-inquiry" element={<FranchiseForm />} />
       </Routes>
 
