@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Franchise.css";
 import franchiseImage from "../assets/franchise.jpg";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 export default function Franchise() {
   const [openSection, setOpenSection] = useState(null);
@@ -12,12 +13,45 @@ export default function Franchise() {
   };
 
   const handlePhoneCall = () => {
-    window.location.href = "tel:+919999999999"; // Replace with your actual phone number
+    window.location.href = "tel:+919999999999";
   };
 
   const handleInquiry = () => {
     navigate("/franchise-inquiry");
   };
+
+  const sections = [
+    {
+      title: "Why Partner With Us?",
+      content: [
+        "✅ Established Brand Recognition: Leverage our trusted reputation and loyal customer base.",
+        "✅ Comprehensive Training: Receive in-depth training on operations, marketing, and customer service.",
+        "✅ Ongoing Support: Benefit from continuous assistance in marketing, operations, and management.",
+        "✅ Proven Business Model: Operate with confidence using our tested systems and processes.",
+        "✅ Marketing Assistance: Access national and local marketing campaigns to drive business growth.",
+        "✅ Exclusive Territory: Enjoy the advantage of a protected area for your franchise."
+      ]
+    },
+    {
+      title: "Ideal Franchisee Profile",
+      content: [
+        "✅ Entrepreneurial and motivated to succeed",
+        "✅ Committed to delivering excellent customer service",
+        "✅ Willing to follow a proven system",
+        "✅ Financially prepared to invest in a growing business"
+      ]
+    },
+    {
+      title: "Steps to Becoming a Franchisee",
+      content: [
+        "📋 Submit Your Application: Fill out our online franchise inquiry form.",
+        "📞 Initial Discussion: Speak with our franchise development team to learn more.",
+        "✅ Review & Approval: We’ll review your application and qualifications.",
+        "🖊️ Franchise Agreement: Sign the agreement and begin your journey.",
+        "🚀 Training & Launch: Complete our training program and open your franchise."
+      ]
+    }
+  ];
 
   return (
     <section className="franchise-section" id="franchise">
@@ -28,7 +62,7 @@ export default function Franchise() {
             Join a thriving brand and unlock your entrepreneurial potential. By franchising with us, you gain access to a proven business model, comprehensive support, and a recognized name in the industry. We are committed to your success and provide the tools and resources you need to grow.
           </p>
           <button className="franchise-btn" onClick={handlePhoneCall}>
-            Contact Franchise Team
+            📞 Contact Franchise Team
           </button>
         </div>
 
@@ -38,62 +72,33 @@ export default function Franchise() {
       </div>
 
       <div className="franchise-accordion">
-        <div className="accordion-item">
-          <h3 onClick={() => toggleSection(1)}>
-            Why Partner With Us? <span>{openSection === 1 ? "▲" : "▼"}</span>
-          </h3>
-          <div className={`accordion-content ${openSection === 1 ? "open" : ""}`}>
-            <ul>
-              <li><strong>Established Brand Recognition:</strong> Leverage our trusted reputation and loyal customer base.</li>
-              <li><strong>Comprehensive Training:</strong> Receive in-depth training on operations, marketing, and customer service.</li>
-              <li><strong>Ongoing Support:</strong> Benefit from continuous assistance in marketing, operations, and management.</li>
-              <li><strong>Proven Business Model:</strong> Operate with confidence using our tested systems and processes.</li>
-              <li><strong>Marketing Assistance:</strong> Access national and local marketing campaigns to drive business growth.</li>
-              <li><strong>Exclusive Territory:</strong> Enjoy the advantage of a protected area for your franchise.</li>
-            </ul>
+        {sections.map((section, index) => (
+          <div className="accordion-item" key={index}>
+            <h3 onClick={() => toggleSection(index)}>
+              {section.title}
+              <span>
+                {openSection === index ? <FaChevronUp /> : <FaChevronDown />}
+              </span>
+            </h3>
+            <div className={`accordion-content ${openSection === index ? "open" : ""}`}>
+              <ul>
+                {section.content.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
-
-        <div className="accordion-item">
-          <h3 onClick={() => toggleSection(2)}>
-            Ideal Franchisee Profile <span>{openSection === 2 ? "▲" : "▼"}</span>
-          </h3>
-          <div className={`accordion-content ${openSection === 2 ? "open" : ""}`}>
-            <ul>
-              <li>Entrepreneurial and motivated to succeed</li>
-              <li>Committed to delivering excellent customer service</li>
-              <li>Willing to follow a proven system</li>
-              <li>Financially prepared to invest in a growing business</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="accordion-item">
-          <h3 onClick={() => toggleSection(3)}>
-            Steps to Becoming a Franchisee <span>{openSection === 3 ? "▲" : "▼"}</span>
-          </h3>
-          <div className={`accordion-content ${openSection === 3 ? "open" : ""}`}>
-            <ol>
-              <li>Submit Your Application: Fill out our online franchise inquiry form.</li>
-              <li>Initial Discussion: Speak with our franchise development team to learn more.</li>
-              <li>Review & Approval: We’ll review your application and qualifications.</li>
-              <li>Franchise Agreement: Sign the agreement and begin your journey.</li>
-              <li>Training & Launch: Complete our training program and open your franchise.</li>
-            </ol>
-          </div>
-        </div>
+        ))}
       </div>
 
       <div className="franchise-cta">
         <h3>Ready to Start?</h3>
         <p>
-          Take the first step toward business ownership. Contact us today to learn more about franchising opportunities and how you can become part of our growing family.
-        </p>
-        <p>
-          For more information, please fill out our franchise inquiry form or reach out to our franchise development team. We look forward to partnering with you!
+          Take the first step toward business ownership. Fill out our inquiry form
+          or reach out to our franchise team — let’s grow together!
         </p>
         <button className="franchise-btn" onClick={handleInquiry}>
-          Start Your Franchise Inquiry
+          🚀 Start Your Franchise Inquiry
         </button>
       </div>
     </section>

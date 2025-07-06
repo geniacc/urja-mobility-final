@@ -32,10 +32,11 @@ export default function About() {
           </ul>
         </div>
 
-        <div className="about-box">
+        {/* ✅ Modern, compact difference card */}
+        <div className="about-box comparison-box">
           <h3>Leasing vs. Financing</h3>
-          <div className="comparison">
-            <div className="comparison-column">
+          <div className="comparison-grid">
+            <div className="comparison-card">
               <h4>Leasing</h4>
               <ul>
                 <li>Lower upfront costs and predictable payments.</li>
@@ -43,7 +44,7 @@ export default function About() {
                 <li>Flexibility to upgrade to new models.</li>
               </ul>
             </div>
-            <div className="comparison-column">
+            <div className="comparison-card">
               <h4>Financing</h4>
               <ul>
                 <li>Pay towards full ownership of the vehicle.</li>

@@ -2,37 +2,41 @@ import React from "react";
 import "./FranchiseForm.css";
 
 export default function FranchiseForm() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Thank you! We’ve received your inquiry.");
+  };
+
   return (
     <div className="franchise-form-page">
-      <h2>Franchise Inquiry Form</h2>
-      <form className="franchise-form" onSubmit={(e) => {
-        e.preventDefault();
-        alert('Form submitted successfully!');
-      }}>
-        <label>
-          Full Name:
-          <input type="text" placeholder="Enter your name" required />
-        </label>
+      <h2>Franchise Inquiry</h2>
+      <p className="form-subtext">We’re excited to learn about your interest in Urja Mobility.</p>
 
-        <label>
-          Email:
-          <input type="email" placeholder="Enter your email" required />
-        </label>
+      <form className="franchise-form" onSubmit={handleSubmit}>
+        <div className="form-group">
+          <input type="text" id="name" required />
+          <label htmlFor="name">Full Name</label>
+        </div>
 
-        <label>
-          Phone Number:
-          <input type="tel" placeholder="Enter your phone number" required />
-        </label>
+        <div className="form-group">
+          <input type="email" id="email" required />
+          <label htmlFor="email">Email Address</label>
+        </div>
 
-        <label>
-          Location:
-          <input type="text" placeholder="City/State" required />
-        </label>
+        <div className="form-group">
+          <input type="tel" id="phone" required />
+          <label htmlFor="phone">Phone Number</label>
+        </div>
 
-        <label>
-          Message:
-          <textarea placeholder="Tell us about your interest" required></textarea>
-        </label>
+        <div className="form-group">
+          <input type="text" id="location" required />
+          <label htmlFor="location">Location (City/State)</label>
+        </div>
+
+        <div className="form-group">
+          <textarea id="message" rows="5" required></textarea>
+          <label htmlFor="message">Tell us more</label>
+        </div>
 
         <button type="submit">Submit Inquiry</button>
       </form>
