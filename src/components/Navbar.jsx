@@ -1,28 +1,21 @@
+// src/components/Navbar.jsx
 import React, { useState, useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import "./Navbar.css";
 import logo from "../assets/logo.png";
 
 export default function Navbar() {
-  const location = useLocation();
-  const isHome = location.pathname === "/";
   const [hidden, setHidden] = useState(false);
   const lastScrollY = useRef(0);
 
   useEffect(() => {
-    function onScroll() {
+    const onScroll = () => {
       const currentY = window.scrollY;
-      if (currentY > lastScrollY.current + 10) {
-        // scrolled down
-        setHidden(true);
-      } else if (currentY < lastScrollY.current - 10) {
-        // scrolled up
-        setHidden(false);
-      }
+      if (currentY > lastScrollY.current + 10) setHidden(true);
+      else if (currentY < lastScrollY.current - 10) setHidden(false);
       lastScrollY.current = currentY;
-    }
-
+    };
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -30,24 +23,17 @@ export default function Navbar() {
   return (
     <header className={`navbar${hidden ? " hidden" : ""}`}>
       <div className="navbar-left">
-        <img src={logo} alt="Urja Mobility" className="navbar-logo" />
+        <HashLink smooth to="/">
+          <img src={logo} alt="Urja Mobility" className="navbar-logo" />
+        </HashLink>
       </div>
 
       <nav className="navbar-center">
-        <Link to="/">Home</Link>
-        {isHome ? (
-          <>
-            <a href="#products">Products</a>
-            <a href="#contact">Contact</a>
-          </>
-        ) : (
-          <>
-            <Link to="/#products">Products</Link>
-            <Link to="/#contact">Contact</Link>
-          </>
-        )}
-        <Link to="/policies/privacy">Privacy Policy</Link>
-        <Link to="/policies">Policies</Link>
+        <HashLink smooth to="/">Home</HashLink>
+        <HashLink smooth to="/#products">Products</HashLink>
+        <HashLink smooth to="/#contact">Contact</HashLink>
+        <HashLink smooth to="/policies/privacy">Privacy Policy</HashLink>
+        <HashLink smooth to="/policies">Policies</HashLink>
       </nav>
 
       <div className="navbar-right">

@@ -1,5 +1,6 @@
+// src/App.jsx
 import { useEffect } from "react";
-import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
@@ -14,16 +15,15 @@ import StaffLoan from "./components/StaffLoan";
 import TermsConditions from "./components/TermsConditions";
 import FranchiseForm from "./components/FranchiseForm";
 
+// You can keep this if you still want to auto-scroll on BACK/FORWARD navigation
 function ScrollToHash() {
   const location = useLocation();
 
   useEffect(() => {
     if (location.hash) {
       const id = location.hash.replace("#", "");
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
