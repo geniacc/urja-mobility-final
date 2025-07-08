@@ -40,7 +40,7 @@ export default function PrivacyPolicy() {
         <br />
         Urja Mobility, Netaji Subhash Place, Pitampura, 11th Floor, BestSky Tower, New Delhi, India
         <br />
-        Phone: <a href="tel:+919871105412">+91 98711 05412</a>
+        Phone: <a href="tel:+918076232044">+918076232044</a>
         <br />
         Email: <a href="mailto:info@urjamobility.in">info@urjamobility.in</a>
       </p>

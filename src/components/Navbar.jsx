@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import React, { useState, useEffect, useRef } from "react";
 import { HashLink } from "react-router-hash-link";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
@@ -37,9 +36,9 @@ export default function Navbar() {
       </nav>
 
       <div className="navbar-right">
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook /></a>
+        <a href="https://www.facebook.com/profile.php?id=61561329663619" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook /></a>
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
+        <a href="https://www.linkedin.com/company/urjamobility/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
       </div>
     </header>
   );
