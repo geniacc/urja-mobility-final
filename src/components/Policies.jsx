@@ -1,6 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaShieldAlt, FaBullhorn, FaLock, FaUndo, FaExclamationTriangle, FaHashtag, FaUserTie, FaFileContract } from "react-icons/fa";
+import {
+  FaShieldAlt,
+  FaBullhorn,
+  FaLock,
+  FaUndo,
+  FaExclamationTriangle,
+  FaHashtag,
+  FaFileContract
+} from "react-icons/fa";
 import "./Policies.css";
 
 export default function Policies() {
@@ -32,10 +40,6 @@ export default function Policies() {
 
         <Link to="/policies/social-media" className="policy-btn">
           <FaHashtag className="policy-icon" /> Social Media Policy
-        </Link>
-
-        <Link to="/policies/staff-loan" className="policy-btn">
-          <FaUserTie className="policy-icon" /> Staff Loan & Salary Advance
         </Link>
 
         <Link to="/policies/terms-conditions" className="policy-btn">

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Franchise.css";
-import franchiseImage from "../assets/franchise.jpg";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 export default function Franchise() {
@@ -64,10 +63,6 @@ export default function Franchise() {
           <button className="franchise-btn" onClick={handlePhoneCall}>
             📞 Contact Franchise Team
           </button>
-        </div>
-
-        <div className="franchise-media">
-          <img src={franchiseImage} alt="Franchise with Urja Mobility" />
         </div>
       </div>
 
