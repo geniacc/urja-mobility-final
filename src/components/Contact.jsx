@@ -11,7 +11,7 @@ export default function Contact() {
         <div className="contact-info">
           <h3>Get in Touch</h3>
           <p><strong>Email:</strong> <a href="mailto:info@urjamobility.in">info@urjamobility.in</a></p>
-          <p><strong>Phone:</strong> +91 98765 43210</p>
+          <p><strong>Phone:</strong> +918076232044</p>
           <p><strong>Address:</strong> Urja Mobility HQ, Delhi, India</p>
         </div>
 
