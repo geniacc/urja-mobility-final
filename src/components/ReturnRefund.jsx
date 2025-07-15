@@ -62,7 +62,7 @@ export default function ReturnRefundPolicy() {
       <h3>2.5 Contact Information</h3>
       <p>
         Urja Mobility, Netaji Subhash Place, Pitampura, 11th Floor, BestSky Tower, New Delhi, 110034, India<br />
-        <strong>Phone:</strong> <a href="tel:+918076232044">+918076232044</a><br />
+        <strong>Phone:</strong> <a href="tel:+918277343434">+918277343434</a><br />
         <strong>Email:</strong> <a href="mailto:info@urjamobility.in">info@urjamobility.in</a>
       </p>
 

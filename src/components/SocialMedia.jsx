@@ -102,7 +102,7 @@ export default function SocialMediaPolicy() {
         <strong>Corporate Communications Department</strong><br />
         MTOW (Urja Mobility)<br />
         Netaji Subhash Place, Pitampura, 11th Floor, BestSky Tower, New Delhi, 110034, India<br />
-        Phone: <a href="tel:+918076232044">+918076232044</a><br />
+        Phone: <a href="tel:+918277343434">+918277343434</a><br />
         Email: <a href="mailto:info@urjamobility.in">info@urjamobility.in</a>
       </address>
 

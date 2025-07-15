@@ -40,7 +40,7 @@ export default function Footer() {
         <div className="footer-right">
           <h4>Contact Us</h4>
           <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@urjamobility.in">info@urjamobility.in</a></p>
-          <p><a href="tel:+918076232044">+918076232044</a></p>
+          <p><a href="tel:+918277343434">+918277343434</a></p>
           <div className="footer-social">
             <a href="https://www.facebook.com/profile.php?id=61561329663619" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
             <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>

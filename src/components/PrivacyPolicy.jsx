@@ -104,7 +104,7 @@ export default function PrivacyPolicy() {
         <br />
         Email: <a href="mailto:info@urjamobility.in">info@urjamobility.in</a>
         <br />
-        Phone: <a href="tel:+918076232044">+91 8076232044</a>
+        Phone: <a href="tel:+918277343434">+91 8277343434</a>
       </p>
 
       <p>
